@@ -16,46 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-w7-xrd">
-                                <rect key="frame" x="85" y="120" width="244" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-gS-2OD">
-                                <rect key="frame" x="87" y="300" width="240" height="240"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97l-FW-h1X">
-                                <rect key="frame" x="157" y="632" width="100" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                    </backgroundConfiguration>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Ask">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLf-QQ-UYD"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hb5-vJ-EBO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-pK-RZO" userLabel="topView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-w7-xrd">
+                                                <rect key="frame" x="85.5" y="124" width="243.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ph9-w7-xrd" firstAttribute="centerY" secondItem="dbe-pK-RZO" secondAttribute="centerY" id="Bah-Un-kHC"/>
+                                            <constraint firstItem="ph9-w7-xrd" firstAttribute="centerX" secondItem="dbe-pK-RZO" secondAttribute="centerX" id="mBX-fE-rX9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDE-3s-WBW" userLabel="middleView">
+                                        <rect key="frame" x="0.0" y="306" width="414" height="284"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-gS-2OD">
+                                                <rect key="frame" x="117" y="52" width="180" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-tH-Tqh" userLabel="bottomView">
+                                        <rect key="frame" x="0.0" y="612" width="414" height="284"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97l-FW-h1X">
+                                                <rect key="frame" x="175" y="121" width="64.5" height="42"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Ask">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLf-QQ-UYD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="97l-FW-h1X" firstAttribute="centerX" secondItem="hsN-tH-Tqh" secondAttribute="centerX" id="0Jq-Cp-XGw"/>
+                                            <constraint firstItem="97l-FW-h1X" firstAttribute="centerY" secondItem="hsN-tH-Tqh" secondAttribute="centerY" id="XmD-Wl-GU2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hsN-tH-Tqh" firstAttribute="leading" secondItem="hb5-vJ-EBO" secondAttribute="leading" id="BHc-Fv-XvX"/>
+                                    <constraint firstAttribute="trailing" secondItem="dbe-pK-RZO" secondAttribute="trailing" id="EDr-Yi-di1"/>
+                                    <constraint firstItem="iDE-3s-WBW" firstAttribute="leading" secondItem="hb5-vJ-EBO" secondAttribute="leading" id="KcF-k3-Q4O"/>
+                                    <constraint firstAttribute="bottom" secondItem="hsN-tH-Tqh" secondAttribute="bottom" id="O28-hK-TWw"/>
+                                    <constraint firstItem="dbe-pK-RZO" firstAttribute="leading" secondItem="hb5-vJ-EBO" secondAttribute="leading" id="OVx-gT-8dX"/>
+                                    <constraint firstItem="dbe-pK-RZO" firstAttribute="top" secondItem="hb5-vJ-EBO" secondAttribute="top" id="caa-mz-92d"/>
+                                    <constraint firstAttribute="trailing" secondItem="iDE-3s-WBW" secondAttribute="trailing" id="dHL-m9-zBv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hsN-tH-Tqh" secondAttribute="trailing" id="pgb-eA-Yvf"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Hz-gS-2OD" secondAttribute="trailing" constant="87" id="6fj-po-e5I"/>
-                            <constraint firstItem="ph9-w7-xrd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="Lkn-MT-IBE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ph9-w7-xrd" secondAttribute="trailing" constant="85" id="S9f-jt-x0C"/>
-                            <constraint firstItem="6Hz-gS-2OD" firstAttribute="top" secondItem="ph9-w7-xrd" secondAttribute="bottom" constant="144" id="ZUC-Mu-jIC"/>
-                            <constraint firstItem="6Hz-gS-2OD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="lLZ-xt-yfR"/>
-                            <constraint firstItem="ph9-w7-xrd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="z3H-te-AkW"/>
+                            <constraint firstItem="hb5-vJ-EBO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HxI-af-mb7"/>
+                            <constraint firstItem="hb5-vJ-EBO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qc1-id-Uvp"/>
+                            <constraint firstAttribute="trailing" secondItem="hb5-vJ-EBO" secondAttribute="trailing" id="kwG-lX-Yy0"/>
+                            <constraint firstAttribute="bottom" secondItem="hb5-vJ-EBO" secondAttribute="bottom" id="vjL-k3-W4M"/>
                         </constraints>
                     </view>
                     <connections>
